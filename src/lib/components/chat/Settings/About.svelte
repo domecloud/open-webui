@@ -42,8 +42,8 @@
 	});
 </script>
 
-<div class="flex flex-col h-full justify-between space-y-3 text-sm mb-6">
-	<div class=" space-y-3">
+<div class="flex flex-col justify-between h-full mb-6 space-y-3 text-sm">
+	<div class="space-y-3 ">
 		<div>
 			<div class=" mb-2.5 text-sm font-medium flex space-x-2 items-center">
 				<div>
@@ -51,7 +51,7 @@
 					{$i18n.t('Version')}
 				</div>
 			</div>
-			<div class="flex w-full justify-between items-center">
+			<div class="flex items-center justify-between w-full">
 				<div class="flex flex-col text-xs text-gray-700 dark:text-gray-200">
 					<div class="flex gap-1">
 						<Tooltip content={WEBUI_BUILD_HASH}>
@@ -71,7 +71,7 @@
 					</div>
 
 					<button
-						class=" underline flex items-center space-x-1 text-xs text-gray-500 dark:text-gray-500"
+						class="flex items-center space-x-1 text-xs text-gray-500 underline dark:text-gray-500"
 						on:click={() => {
 							showChangelog.set(true);
 						}}
@@ -130,14 +130,14 @@
 		</div>
 
 		<div class="mt-2 text-xs text-gray-400 dark:text-gray-500">
-			{#if !$WEBUI_NAME.includes('Open WebUI')}
-				<span class=" text-gray-500 dark:text-gray-300 font-medium">{$WEBUI_NAME}</span> -
+			{#if !$WEBUI_NAME.includes('Open WebUI (JIB 1.0-Alpha1)')}
+				<span class="font-medium text-gray-500 dark:text-gray-300">{$WEBUI_NAME}</span> -
 			{/if}
-			{$i18n.t('Created by')}
+			{$i18n.t('Base on')}
 			<a
-				class=" text-gray-500 dark:text-gray-300 font-medium"
-				href="https://github.com/tjbck"
-				target="_blank">Timothy J. Baek</a
+				class="font-medium text-gray-500 dark:text-gray-300"
+				href="https://github.com/open-webui/open-webui"
+				target="_blank">Open WebUI</a
 			>
 		</div>
 	</div>
